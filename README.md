@@ -19,13 +19,13 @@ The default configuration uses a `t3.micro` instance which is eligible for [AWS 
     4. Click "Create user"
 2.  Set up your AWS credentials if you haven't already
     1. Create `~/.aws/credentials`:
-    ```toml
+    ```
     [default]
     aws_access_key_id = AAAAAAAAAAAAAAAAAAAA # Replace with the access key if of your IAM user
     aws_secret_access_key = AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA # Replace with the secret access key of your IAM user
     ```
     2. Create `~/.aws/config`:
-    ```toml
+    ```
     [default]
     region = ap-southeast-2 # Replace with the region you want to deploy to
     ```
@@ -54,13 +54,13 @@ Run `yarn deploy`. The public IP address of your EC2 instance should be output o
 
 You can SSH into the server to run commands (e.g. to switch maps):
 
-```sh
+```
 ssh quake@<IP-address>
 ```
 
 You can also SSH into a regular shell:
 
-```ssh
+```
 ssh ec2-user@<IP-address>
 ```
 
