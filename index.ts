@@ -17,6 +17,8 @@ const serverCfg = stack.node.tryGetContext("serverCfg") || "./default.cfg";
 const instanceType = stack.node.tryGetContext("instanceType") || "t2.micro";
 // SSH key name to use (must already exist in AWS)
 const keyName = stack.node.tryGetContext("keyName");
+// An existing Elastic IP addres to use
+const eip = stack.node.tryGetContext("eip");
 
 // VPC (Because we're forced to have one)
 
@@ -48,6 +50,13 @@ const instance = new ec2.Instance(stack, "Instance", {
   vpcSubnets: { subnetType: ec2.SubnetType.PUBLIC },
   securityGroup,
   keyName,
+});
+
+// EIPAssociation
+
+new ec2.CfnEIPAssociation(stack, "EIPAssociation", {
+  instanceId: instance.instanceId,
+  eip: eip || new ec2.CfnEIP(stack, "EIP").ref,
 });
 
 // Outputs

@@ -2,7 +2,7 @@
 
 This is a small [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) template to quickly set up an ioquake3 server running on an EC2 instance with a public IP address and SSH access.
 
-The default configuration uses a `t3.micro` instance which is eligible for [AWS Free Tier](https://aws.amazon.com/free/), so it should be free for 12 months and afterwards should cost _around_ \$5 a month if running 24/7. But the advantage of this template is that you can easily undeploy it whenever you're not using it, and redeploy it in ~5 minutes when you want to use it again, so you only pay for it while you're using it.
+The default configuration uses a `t2.micro` instance which is eligible for [AWS Free Tier](https://aws.amazon.com/free/), so it should be free for 12 months and afterwards should cost _around_ \$10 a month (\$5 if you switch to a `nano` instance) if running 24/7. But the advantage of this template is that you can easily undeploy it whenever you're not using it, and redeploy it in ~5 minutes when you want to use it again, so you only pay for it while you're using it.
 
 ## Pre-requisites
 
@@ -40,7 +40,9 @@ The default configuration uses a `t3.micro` instance which is eligible for [AWS 
       // The EC2 instance type to user (default: t2.micro)
       "instanceType": "t3a.nano", // t3a.nano is usually the cheapest if your 12 months of AWS Free Tier are up
       // The name of your SSH key in EC2
-      "keyName": "my-key-name@hostname"
+      "keyName": "my-key-name@hostname",
+      // An existing Elastic IP address to use (default: create a new EIP)
+      "eip": "1.2.3.4"
     }
     ```
 5.  Run `yarn install` to install the project dependencies
