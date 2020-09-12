@@ -30,15 +30,15 @@ The default configuration uses a `t3.micro` instance which is eligible for [AWS 
     region = ap-southeast-2 # Replace with the region you want to deploy to
     ```
 3.  [Import your SSH key into EC2](https://console.aws.amazon.com/ec2/v2/home#ImportKeyPair::)
-4.  Create `./cdk.context.json` (remove comments):
+4.  Create `./cdk.context.json` (remove comments and any options you want to leave as the default):
     ```jsonc
     {
       // Location of the retail pak0.pk3 file (default: ./pak0.pk3)
       "pak0": "/quake3/baseq3/pak0.pk3",
       // Location of a start-up script for the Quake 3 server (default: ./default.cfg)
       "serverCfg": "./my-start-up-script.cfg",
-      // The EC2 instance type to user (default: t3.micro)
-      "instanceType": "t3.micro",
+      // The EC2 instance type to user (default: t2.micro)
+      "instanceType": "t3a.nano", // t3a.nano is usually the cheapest if your 12 months of AWS Free Tier are up
       // The name of your SSH key in EC2
       "keyName": "my-key-name@hostname"
     }

@@ -14,7 +14,7 @@ const pak0 = stack.node.tryGetContext("pak0") || "./pak0.pk3";
 // Location of start-up script for the Quake 3 server
 const serverCfg = stack.node.tryGetContext("serverCfg") || "./default.cfg";
 // Instance type to create, must be anx86_64 instance type
-const instanceType = stack.node.tryGetContext("instanceType") || "t3.micro";
+const instanceType = stack.node.tryGetContext("instanceType") || "t2.micro";
 // SSH key name to use (must already exist in AWS)
 const keyName = stack.node.tryGetContext("keyName");
 
