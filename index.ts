@@ -21,7 +21,6 @@ const keyName = stack.node.tryGetContext("keyName");
 // VPC (Because we're forced to have one)
 
 const vpc = new ec2.Vpc(stack, "Vpc", {
-  maxAzs: 1,
   subnetConfiguration: [{ name: "public", subnetType: ec2.SubnetType.PUBLIC }],
 });
 

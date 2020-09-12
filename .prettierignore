@@ -1,2 +1,2 @@
-/cdk.out/
-/outputs.json
+cdk.out/
+cdk.context.json

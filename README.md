@@ -18,14 +18,14 @@ The default configuration uses a `t3.micro` instance which is eligible for [AWS 
     3. Add tags if you want then click next
     4. Click "Create user"
 2.  Set up your AWS credentials if you haven't already
-    1. Create `~/.aws/credentials`:
-    ```
+    1. Create `~/.aws/credentials` (remove comments):
+    ```ini
     [default]
-    aws_access_key_id = AAAAAAAAAAAAAAAAAAAA # Replace with the access key if of your IAM user
+    aws_access_key_id = AAAAAAAAAAAAAAAAAAAA # Replace with the access key ID of your IAM user
     aws_secret_access_key = AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA # Replace with the secret access key of your IAM user
     ```
-    2. Create `~/.aws/config`:
-    ```
+    2. Create `~/.aws/config` (remove comments):
+    ```ini
     [default]
     region = ap-southeast-2 # Replace with the region you want to deploy to
     ```
