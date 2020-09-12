@@ -2,10 +2,9 @@
 
 import * as cdk from "@aws-cdk/core";
 import * as ec2 from "@aws-cdk/aws-ec2";
-import * as assets from "@aws-cdk/aws-s3-assets";
 
 const app = new cdk.App();
-const stack = new cdk.Stack(app);
+const stack = new cdk.Stack(app, "Quake");
 
 // Context inputs
 

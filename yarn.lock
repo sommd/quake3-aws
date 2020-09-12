@@ -76,7 +76,7 @@
     "@aws-cdk/core" "1.62.0"
     constructs "^3.0.4"
 
-"@aws-cdk/aws-s3-assets@1.62.0", "@aws-cdk/aws-s3-assets@^1.62.0":
+"@aws-cdk/aws-s3-assets@1.62.0":
   version "1.62.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@aws-cdk/aws-s3-assets/-/aws-s3-assets-1.62.0.tgz#74e350c57d9a2b693dbacfc7559135b1894bccba"
   integrity sha1-dONQxX2aK2k9us/HVZE1sYlLzLo=
