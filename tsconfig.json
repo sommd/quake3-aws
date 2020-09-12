@@ -4,6 +4,9 @@
     "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
     "noEmit": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es2018"
